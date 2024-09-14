@@ -4,6 +4,7 @@
 include('config.phd');
 $pdo = conectar();
 
+$TABELA = 'users';
 
 // C R U D
 // Create > Criar um novo repositório, insere dados ultilizados a palavras reservadas INSERT do SQL.
@@ -37,6 +38,18 @@ $pdo = conectar();
 
 /********** PROCURA DADOS DA TABELA **********/
 
+
+$id = 1;
+$stmt = $qdo>prepare('SELECT' * FROM '.$TABELA.' WHERE id = :id');
+$stmt>execute( array( 'id' > $id ));
+
+$resultado = $stmt >fetchAll();
+
+foreach ($resultado as $key ) {
+  var_dump($key);
+}
+  
 /********** INSERÇÃO DE DADOS EM UMA TABELA **********/
+
 
 /********** ATUALIZAÇÃO DADOS DE UMA TABELA **********/
