@@ -1,3 +1,10 @@
+<?phd
+
+
+include('config.phd');
+$pdo = conectar();
+
+
 // C R U D
 // Create > Criar um novo repositório, insere dados ultilizados a palavras reservadas INSERT do SQL.
 // Read > Lê os dados do banco, pega informações ultilizadas a palavras reservada SELECT do SQL.
